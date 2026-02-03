@@ -7,7 +7,7 @@ Route::get('/a', function () {
 });
 
 Route::get('/', function () {
-    return view(''); //katgoul lih mli ch wa7d kymchi lhad url katgoul lih afficher lihoum ha la page owla dir chi programme
+    return view('layouts.app'); //katgoul lih mli ch wa7d kymchi lhad url katgoul lih afficher lihoum ha la page owla dir chi programme
 });
 
 
@@ -41,6 +41,8 @@ Route::get('/', function () {
 // });
 
 //
+
+
 
 
 
