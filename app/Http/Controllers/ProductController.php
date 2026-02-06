@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public $products = [
         [
-        'id' => 1,
+        'id' => 0,
         'title' => 'HP16D0195NF',
         'price' => 'Intel i5 12th Gen',
         'image' => 'HP16D0195NF.jpg',
@@ -18,14 +18,14 @@ class ProductController extends Controller
        multimédia.'
         ],
         [
-        'id' => 2,
+        'id' => 1,
         'title' => 'HP14424U3EA',
         'price' => 'Intel i3 11th Gen',
         'image' => 'HP14424U3EA.jpg',
         'description' => 'Portable léger adapté aux tâches quotidiennes.'
         ],
         [
-        'id' => 3,
+        'id' => 2,
         'title' => 'HUA6901443442959',
         'price' => 'Ryzen 5 4600H',
         'image' => 'HUA6901443442959.jpg',
@@ -33,7 +33,7 @@ class ProductController extends Controller
        léger.'
         ],
         [
-        'id' => 4,
+        'id' => 3,
         'title' => 'NXATHEF002',
         'price' => 'Intel i7 10th Gen',
         'image' => 'NXATHEF002.jpg',
@@ -43,6 +43,7 @@ class ProductController extends Controller
 
     public function index(){
         return view("products.index", ['products'=>$this->products]);
+        //hadi b7al ila dawazti props
     }
     public function show($id){
         $product = $this->products[$id];

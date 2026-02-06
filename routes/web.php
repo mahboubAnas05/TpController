@@ -1,16 +1,33 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+
 
 Route::get('/a', function () {
     return view('welcome'); //katgoul lih mli ch wa7d kymchi lhad url katgoul lih afficher lihoum ha la page owla dir chi programme
 });
 
-Route::get('/', function () {
-    return view('layouts.app'); //katgoul lih mli ch wa7d kymchi lhad url katgoul lih afficher lihoum ha la page owla dir chi programme
-});
 
 
+Route::view('/', "home")->name('home');
+Route::view('/about', "about")->name("about");
+Route::view('/contact', "contact")->name("contact");
+Route::get('/products', [ProductController::class, 'index'])->name("products.index");
+Route::get("/products/{id}", [ProductController::class, "show"])->name("products.show");
+
+
+
+
+
+
+
+
+
+
+
+
+//===============================================
 // Route::get('/login', function(){
 //     return 'page login' ;
 // });
